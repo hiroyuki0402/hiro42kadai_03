@@ -41,9 +41,6 @@
                                     <constraint firstAttribute="width" constant="47" id="N2F-xb-kOb"/>
                                     <constraint firstAttribute="height" constant="31" id="Q54-vc-noz"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="switch01:" destination="BYZ-38-t0r" eventType="valueChanged" id="KqH-Wu-euL"/>
-                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-yk-sUN">
                                 <rect key="frame" x="201" y="121" width="49" height="31"/>
@@ -51,9 +48,6 @@
                                     <constraint firstAttribute="height" constant="31" id="14t-xE-aCx"/>
                                     <constraint firstAttribute="width" constant="47" id="2I6-Ny-3QB"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="swith02:" destination="BYZ-38-t0r" eventType="valueChanged" id="0WF-ZX-nMK"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSg-aM-E18">
                                 <rect key="frame" x="16" y="127" width="20" height="20"/>
