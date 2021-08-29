@@ -7,40 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITextFieldDelegate {
-    
-    @IBOutlet var textField01: UITextField!
-    @IBOutlet var textField02: UITextField!
-    @IBOutlet var label01: UILabel!
-    @IBOutlet var label02: UILabel!
-    @IBOutlet var resultLabel: UILabel!
-    @IBOutlet var switch01Obj: UISwitch!
-    @IBOutlet var switch02Obj: UISwitch!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        delegate()
-        
-        // Do any additional setup after loading the view.
+class ViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet private var leftTextField: UITextField!
+    @IBOutlet private var rightTextField: UITextField!
+    @IBOutlet private var leftLabel: UILabel!
+    @IBOutlet private var rightLabel: UILabel!
+    @IBOutlet private var resultLabel: UILabel!
+    @IBOutlet private var leftSwitch: UISwitch!
+    @IBOutlet private weak var rightSwitch: UISwitch!
+
+    @IBAction private func calculationButton(_ sender: Any) {
+        let leftText = Int(leftTextField.text!) ?? 0
+        let rightText = Int(rightTextField.text!) ?? 0
+        let leftvalue = leftSwitch.isOn ? -leftText : leftText
+        let rightvalue = rightSwitch.isOn ? -rightText : rightText
+        leftLabel.text = String(leftvalue)
+        rightLabel.text = String(rightvalue)
+        resultLabel.text = String(leftvalue + rightvalue)
+        view.endEditing(true)
     }
-        @IBAction func calculationButton(_ sender: Any) {
-            let text01 = Int(textField01.text!) ?? 0
-            let text02 = Int(textField02.text!) ?? 0
-            let val01 = switch01Obj.isOn ? -text01 : text01
-            let val02 = switch02Obj.isOn ? -text02 : text02
-            label01.text = String(val01)
-            label02.text = String(val02)
-            resultLabel.text = String(val01 + val02)
-    }
-    
-    
-    private func delegate(){
-        textField01.delegate = self
-        textField02.delegate = self
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.endEditing(true)
-    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
