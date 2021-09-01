@@ -151,6 +151,7 @@
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="xEH-tn-O6N" firstAttribute="leading" secondItem="ur8-Ab-Sli" secondAttribute="leading" id="5Zr-9D-4Hc"/>
                                     <constraint firstAttribute="trailing" secondItem="Ucb-Pj-LlA" secondAttribute="trailing" constant="140" id="6iB-Ed-UD8"/>

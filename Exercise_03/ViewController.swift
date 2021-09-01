@@ -17,13 +17,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private weak var rightSwitch: UISwitch!
 
     @IBAction private func calculationButton(_ sender: Any) {
-        let leftText = Int(leftTextField.text!) ?? 0
-        let rightText = Int(rightTextField.text!) ?? 0
-        let leftvalue = leftSwitch.isOn ? -leftText : leftText
-        let rightvalue = rightSwitch.isOn ? -rightText : rightText
-        leftLabel.text = String(leftvalue)
-        rightLabel.text = String(rightvalue)
-        resultLabel.text = String(leftvalue + rightvalue)
+        let leftValue = Int(leftTextField.text!) ?? 0
+        let rightValue = Int(rightTextField.text!) ?? 0
+        let leftSignedValue = leftSwitch.isOn ? -leftValue : leftValue
+        let rightSignedValue = rightSwitch.isOn ? -rightValue : rightValue
+        leftLabel.text = String(leftSignedValue)
+        rightLabel.text = String(rightSignedValue)
+        resultLabel.text = String(leftSignedValue + rightSignedValue)
         view.endEditing(true)
     }
 
